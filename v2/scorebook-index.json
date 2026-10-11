@@ -1,0 +1,70 @@
+{
+  "contract": "CN_V2_PUBLIC_SCORE_INDEX_v1",
+  "as_of_date_utc": "2026-10-11",
+  "score_era": "CN_V2_PROSPECTIVE_V1",
+  "first_eligible_forecast_week": "2026-W42",
+  "first_eligible_public_issue_number": 29,
+  "publication_status": "AWAITING_FIRST_PROSPECTIVE_FREEZE",
+  "current_frozen_forecast": null,
+  "latest_matured_score": null,
+  "score_families": {
+    "PRICE_RANGE_WEEKLY": {
+      "status": "PENDING_FUTURE_ISSUE",
+      "formula": "70pct_containment_plus_30pct_jaccard",
+      "separate_from_binary_claims": true
+    },
+    "PRICE_RANGE_INTRADAY": {
+      "status": "PENDING_FUTURE_ISSUE",
+      "windows": [
+        "day_1_2",
+        "day_3_4",
+        "day_5_7"
+      ],
+      "separate_from_binary_claims": true
+    },
+    "DIRECTION_ROTATION_CLAIMS": {
+      "status": "AWAITING_ELIGIBLE_FROZEN_PREDICATES",
+      "grading": "100_supported_0_refuted_null_unknown_or_pending",
+      "checkpoint_days": [
+        7,
+        14,
+        21,
+        28,
+        56
+      ]
+    },
+    "PULLBACK_EDGE": {
+      "status": "AWAITING_ELIGIBLE_FROZEN_WARNINGS",
+      "grading": "100_supported_0_refuted_null_unknown_or_pending",
+      "time_buckets_hours": [
+        12,
+        24,
+        48
+      ],
+      "event_horizons_days": [
+        7,
+        14,
+        21,
+        56
+      ],
+      "altcoin_impact_status": "NOT_YET_REPRODUCIBLE"
+    }
+  },
+  "verification": {
+    "status": "NO_V2_PROSPECTIVE_PROOF_AVAILABLE_YET",
+    "git_commit_is_not_independent_timestamp": true,
+    "immutable_release_enabled_and_verified": false,
+    "external_anchor_confirmed": false,
+    "independent_outcome_reproduction": false,
+    "x_required": false
+  },
+  "score_method": "CN_EDGE_BINARY_v2_0",
+  "method": "CN_V2_EDGE_SCOREBOOK_PROTOCOL_2026-W42.md",
+  "schema": "schema/cn-v2-frozen-claims.schema.json",
+  "source_owner_repo": "Donh91/Investering-Framework-Archive-v1",
+  "source_weekly_workflow": ".github/workflows/cycle-navigator-weekly-publication.yml",
+  "source_freeze_filename": "CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+  "legacy_archive": "legacy/CN_PUBLIC_HISTORY_SCOREBOARD_ORIGINAL.json",
+  "human_note": "This object is a truthful bootstrap status index, not a forecast, score or independent proof. Future publisher must update it only after verified external release and evidence gates pass.",
+  "work_mission": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1578"
+}
