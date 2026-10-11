@@ -1,0 +1,30 @@
+name: Public score mirror integrity (draft)
+
+on:
+  pull_request:
+    paths:
+      - 'scores/**'
+      - 'verify/**'
+      - 'LEGACY_IMPORT_INDEX.json'
+      - '.github/workflows/verify-legacy-mirrors.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-legacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate staged historical mirror correspondence
+        run: python verify/verify_legacy_imports.py
+      - name: Exercise negative tampering and scoring-era fixtures
+        run: python -m unittest discover -s verify -p 'test_*.py' -v
+      - name: Proof is not yet independently verified
+        run: |
+          echo 'This workflow checks byte/identity continuity only.'
+          echo 'Do not claim ex-ante independent verification until immutable release and third-party timestamp gates pass.'

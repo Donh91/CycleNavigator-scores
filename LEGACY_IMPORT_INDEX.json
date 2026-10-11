@@ -1,0 +1,61 @@
+{
+  "contract": "CN_LEGACY_IMPORT_INDEX_v1",
+  "status": "STAGED_NOT_PROOF_SEALED",
+  "created_date": "2026-10-11",
+  "provenance": "Public-series canonical scorecards, copied verbatim from the source repository default branch. No source forecast-time cryptographic proof or independent scoring validation established by this migration.",
+  "source_repo": "Donh91/Investering-Framework-Archive-v1",
+  "source_prefix": "05_CYCLE_NAVIGATOR/public_scorecards",
+  "entries": [
+    {
+      "public_issue_number": 23,
+      "forecast_week": "2026-W36",
+      "source_blob_sha1": "90b50b87e1e250c7a742fa59b7ffc49f19f9ef77",
+      "copy": "scores/2026/W36/CN23/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
+    },
+    {
+      "public_issue_number": 24,
+      "forecast_week": "2026-W37",
+      "source_blob_sha1": "fe135e1267631a22098dbc4c1b29ef0e111c4bc2",
+      "copy": "scores/2026/W37/CN24/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
+    },
+    {
+      "public_issue_number": 25,
+      "forecast_week": "2026-W38",
+      "source_blob_sha1": "7a9d8b896789261482a477c7433d137af1d88d0c",
+      "copy": "scores/2026/W38/CN25/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
+    },
+    {
+      "public_issue_number": 26,
+      "forecast_week": "2026-W39",
+      "source_blob_sha1": "1d516f637e95f0a86c3a0b7f2e285c2929beb930",
+      "copy": "scores/2026/W39/CN26/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
+    },
+    {
+      "public_issue_number": 27,
+      "forecast_week": "2026-W40",
+      "source_blob_sha1": "b14c1bde19f342b8bdeac0bca5a6cf4c55f4df68",
+      "copy": "scores/2026/W40/CN27/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
+    }
+  ],
+  "unmigrated_scope": "Individual original forecast freezes and full per-issue source/outcome proof for early CN1–22 are still UNMIGRATED. All 27 completed public issues are now represented in a byte-identical legacy historical score view, and CN23-27 also have individually mirrored canonical public scorecards. Immutable releases, external anchor, independent proof and corrections are NOT deployed.",
+  "rules": [
+    "These records are staged historical scorecard mirrors, not certified independently verified prediction precision.",
+    "The original Git blob SHA1 is a byte-correspondence marker only, not a third-party timestamp.",
+    "No overall accuracy aggregation across eras; preserve null values.",
+    "Latest current public forecast CN28 for 2026-W41 is not a completed settled score in this import."
+  ],
+  "historical_scoreboard": {
+    "copy": "legacy/CN_PUBLIC_HISTORY_SCOREBOARD_ORIGINAL.json",
+    "source_path": "05_CYCLE_NAVIGATOR/site/history-scoreboard.json",
+    "source_blob_sha1": "db7df2b644bc67147de94ad723ce560cd755c68f",
+    "covered_public_cn_numbers": "1-27",
+    "row_count": 27,
+    "status": "LEGACY_ATTESTED",
+    "note": "Verbatim site public-history score projection. Multiple historical score eras and original X-derived provenance labels; not independently established per-issue forecasts or retrospective certified performance."
+  }
+}
