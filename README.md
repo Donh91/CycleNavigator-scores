@@ -13,7 +13,7 @@ The draft branch now mirrors the existing CN historical scoreboard for public is
 ## Current status
 
 - The authoritative forecasts and completed scorecards currently live in the existing Investering Framework repository.
-- This repository currently has no migrated forecast/score packages, immutable releases, independently confirmed timestamps or approved publication workflow.
+- Historical score mirrors are staged in this draft branch, but no independently proven prospective forecast freezes, immutable releases, third-party timestamp confirmations or production publication workflow are in place yet.
 - A GitHub release, by itself, is not independent external attestation. GitHub's immutable-release setting must be enabled before new production releases; independent timestamp anchoring is a separate gate.
 - The current production website and on-chain/market decision engines are unchanged.
 
