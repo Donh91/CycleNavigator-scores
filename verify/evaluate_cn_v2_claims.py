@@ -138,16 +138,16 @@ def grade_one(claim: dict, evidence: dict | None, *, cutoff: datetime) -> dict:
             return reject_or_null(out, "EVENT_THRESHOLD_MISMATCH")
         is_true = observed is expected
     elif kind in {"START_WINDOW", "END_WINDOW"}:
+        first = utc(claim["earliest_utc"])
+        last = utc(claim["latest_utc"])
+        if not start <= first <= last <= end:
+            raise ValueError("date_window_outside_forecast_horizon")
         # A fully observed non-event is a wrong ex-ante start/end prediction, not
         # NOT_EVALUABLE. A non-event may only be declared when the same source
         # has completed the whole original horizon.
         if outcome.get("event_occurred") is False:
             return {**out, "status": "REFUTED", "score": 0,
                     "reason": "PREDICTED_PULLBACK_WINDOW_DID_NOT_OCCUR"}
-        first = utc(claim["earliest_utc"])
-        last = utc(claim["latest_utc"])
-        if not start <= first <= last <= end:
-            raise ValueError("date_window_outside_forecast_horizon")
         if outcome.get("right_censored") is True:
             return reject_or_null(out, "EVENT_NOT_RESOLVED_WITHIN_WINDOW", "RIGHT_CENSORED")
         when = outcome.get("onset_utc" if kind == "START_WINDOW" else "recovery_utc")
