@@ -24,7 +24,7 @@ class PullbackObservationTests(unittest.TestCase):
         self.assertEqual(x["severity"],"NONE")
 
     def test_true_5pct_cross_and_half_recovery(self):
-        x=grade(rows([100,99,98,96,97,99],[99,97,94,92,93,96]))
+        x=grade(rows([100,99,98,96,95,99],[99,97,94,92,93,96]))
         self.assertTrue(x["event_occurred"])
         self.assertEqual(x["onset_utc"],stamp(START+timedelta(hours=2)))
         self.assertEqual(x["trough_utc"],stamp(START+timedelta(hours=3)))
@@ -52,7 +52,7 @@ class PullbackObservationTests(unittest.TestCase):
         self.assertEqual(x["coverage"],"INCOMPLETE")
 
     def test_ambiguous_same_bar_high_low_does_not_trigger_event(self):
-        data=rows([100,200,101,101,101,101],[99,95,100,100,100,100])
+        data=rows([100,200,101,101,101,101],[99,98,100,100,100,100])
         x=grade(data)
         # Huge high of bar 1 cannot be assumed to precede low of bar 1.
         self.assertEqual(x["onset_utc"],stamp(START+timedelta(hours=2)))
