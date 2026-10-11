@@ -18,7 +18,7 @@ import urllib.request
 
 
 def git_blob_sha1(blob: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(blob)).encode() + b"\\0" + blob).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(blob)).encode() + b"\0" + blob).hexdigest()
 
 
 def run(root: pathlib.Path, online: bool) -> dict:
