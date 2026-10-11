@@ -158,6 +158,20 @@ class BinaryClaims(unittest.TestCase):
         o["records"][0]["outcome"]={"onset_utc":"2026-10-13T06:00:00Z"}
         self.assertEqual(run(b,o)["outcomes"][0]["score"], 0)
 
+    def test_predicted_start_never_occurred_is_false_alarm_not_missing(self):
+        b, o = deepcopy(BUNDLE), deepcopy(ACTUAL)
+        b["claims"][0].update(kind="START_WINDOW",earliest_utc="2026-10-12T10:00:00Z",latest_utc="2026-10-12T19:00:00Z")
+        o["records"][0]["outcome"]={"event_occurred":False}
+        result=run(b,o)
+        self.assertEqual(result["outcomes"][0]["score"],0)
+        self.assertEqual(result["outcomes"][0]["status"],"REFUTED")
+
+    def test_predicted_end_without_an_event_is_false_alarm(self):
+        b, o = deepcopy(BUNDLE), deepcopy(ACTUAL)
+        b["claims"][0].update(kind="END_WINDOW",earliest_utc="2026-10-12T12:00:00Z",latest_utc="2026-10-13T07:00:00Z")
+        o["records"][0]["outcome"]={"event_occurred":False}
+        self.assertEqual(run(b,o)["outcomes"][0]["score"],0)
+
     def test_missing_metric_source_identifier_is_bad_claim(self):
         b=deepcopy(BUNDLE)
         b["claims"][0]["metric_source_id"]=""
