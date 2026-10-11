@@ -8,12 +8,12 @@ This repository will give humans and independent AI agents a simple, reproducibl
 
 ## Staged import snapshot (2026-10-11)
 
-The draft branch now mirrors the existing CN historical scoreboard for public issue numbers 1 through 27 as a source-exact legacy record. It also stages individual existing public scorecards for CN23 through CN27. The earliest records are original archive claims with differing metrics and do not satisfy independent ex-ante timestamp verification. No immutable releases or external timestamp anchors have been issued.
+This repository mirrors the existing CN historical scoreboard for public issue numbers 1 through 27 as a source-exact legacy record. It also stages individual existing public scorecards for CN23 through CN27. The earliest records are original archive claims with differing metrics and do not satisfy independent ex-ante timestamp verification. No immutable releases or external timestamp anchors have been issued.
 
 ## Current status
 
 - The authoritative forecasts and completed scorecards currently live in the existing Investering Framework repository.
-- Historical score mirrors are staged in this draft branch, but no independently proven prospective forecast freezes, immutable releases, third-party timestamp confirmations or production publication workflow are in place yet.
+- Historical score mirrors are available as readable public files, but no independently proven prospective forecast freezes, immutable releases, third-party timestamp confirmations or production publication workflow are in place yet.
 - A GitHub release, by itself, is not independent external attestation. GitHub's immutable-release setting must be enabled before new production releases; independent timestamp anchoring is a separate gate.
 - The current production website and on-chain/market decision engines are unchanged.
 
