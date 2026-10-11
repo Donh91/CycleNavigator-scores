@@ -17,6 +17,29 @@ This repository mirrors the existing CN historical scoreboard for public issue n
 - A GitHub release, by itself, is not independent external attestation. GitHub's immutable-release setting must be enabled before new production releases; independent timestamp anchoring is a separate gate.
 - The current production website and on-chain/market decision engines are unchanged.
 
+## The new CN v2 era starts with 2026-W42 / public CN #29
+
+From **Monday 12 October 2026**, the new public-facing evaluation architecture adds three independent evidence families:
+
+1. **Price Range Weekly + Intraday**: the prior BTC/ETH price-range source formula (**70% containment + 30% Jaccard**) is unchanged. Report the full week separately from each D1–2, D3–4 and D5–7 window.
+2. **Direction / Flow / Rotation**: original bilingual, type-checked prospective statements are scored **100 = supported; 0 = refuted; null = pending/abstain/not evaluable** only where the measurable predicate, source and horizon were frozen before outcomes. Individual weekly / 14 / 21 / 28 / 56-day claims retain their original issue identity until maturity.
+3. **Pullback Edge**: track the presence or absence of an explicit warning, actual BTC material pullback onset, severity, possible recovery/end, warning lead time and independently reproducible altcoin-basket impact. False alarms and missed declines must not disappear from reported denominators. No-warning requires a valid, explicit source state; missing risk data is NOT a successful no-warning.
+
+**As of 2026-10-11**, there are **no settled W42 new-era scores**. The scoring code and existing weekly CN source capture have been installed, but the first W42 source freeze, mature observations, immutable release proof and independent claim verification must still occur.
+
+Core public files:
+- [Prospectively registered scoring rules](CN_V2_EDGE_SCOREBOOK_PROTOCOL_2026-W42.md)
+- [Typed bilingual assertion schema](schema/cn-v2-frozen-claims.schema.json)
+- [Deterministic individual binary claim evaluator](verify/evaluate_cn_v2_claims.py)
+- [Hourly BTC pullback evidence extractor](verify/pullback_events.py)
+- [Machine-readable v2 publication status](v2/scorebook-index.json)
+- [Public zero-login proof project](https://github.com/Donh91/CycleNavigator-scores/issues/2)
+- [Source CN W42 weekly capture implementation](https://github.com/Donh91/Investering-Framework-Archive-v1/pull/1577)
+- [CN vNext website preview](https://cycle-navigator-vnext-preview-l1nbkq.v2.appdeploy.ai/)
+- [Work execution and true scoring integration mission](https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1578)
+
+**Important for external AI audits:** Legacy 1–27 scores remain publicly available, but they must not be averaged with v2 binary claims or newly labeled independently timestamped. Price Range precision is not investment return and correct no-warning classifications during a calm market do not alone establish useful pullback Edge. Compare hits, misses, false alarms, prevalence and independence-adjusted controls.
+
 ## The one-rule AI verifier
 
 **Never infer a public score from a screenshot, website headline, X post, or matching internal machine issue number alone.** Resolve the original forecast by **public CN number + forecast week + frozen publication source**, confirm that this source existed before evaluation, then reproduce the completed score with the named method and exact outcome evidence. Keep different score families and scoring eras distinct.
