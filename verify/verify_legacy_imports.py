@@ -27,6 +27,23 @@ def run(root: pathlib.Path, online: bool) -> dict:
     checked = []
     if index.get("contract") != "CN_LEGACY_IMPORT_INDEX_v1":
         errors.append("INVALID_INDEX_CONTRACT")
+    history = index.get("historical_scoreboard")
+    if isinstance(history, dict):
+        try:
+            raw = (root / history["copy"]).read_bytes()
+            if git_blob_sha1(raw) != history["source_blob_sha1"]:
+                errors.append("LEGACY_27_ROW_BLOB_HASH_MISMATCH")
+            archived = json.loads(raw)
+            if archived.get("contract") != "CN_PUBLIC_HISTORY_SCOREBOARD_V2":
+                errors.append("LEGACY_HISTORY_CONTRACT_MISMATCH")
+            roster = archived.get("records", [])
+            if len(roster) != history.get("row_count") or [r.get("cn") for r in roster] != list(range(1, 28)):
+                errors.append("LEGACY_27_ROW_IDENTITY_OR_COVERAGE_MISMATCH")
+            if archived.get("policy", {}).get("cross_era_aggregate") is not False:
+                errors.append("LEGACY_CROSS_ERA_AGGREGATION_UNSAFE")
+        except (KeyError, FileNotFoundError, ValueError, TypeError) as exc:
+            errors.append("LEGACY_HISTORY_UNREADABLE:" + type(exc).__name__)
+
     for entry in index.get("entries", []):
         issue = entry["public_issue_number"]
         week = entry["forecast_week"]
