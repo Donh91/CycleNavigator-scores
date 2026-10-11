@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CN v2 Frozen Prospective Claims",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract",
+    "scoring_contract",
+    "public_issue_number",
+    "forecast_week",
+    "issued_at_utc",
+    "source_sha256",
+    "claims"
+  ],
+  "properties": {
+    "contract": {
+      "const": "CN_V2_FROZEN_CLAIMS_v1"
+    },
+    "scoring_contract": {
+      "const": "CN_EDGE_BINARY_v2_0"
+    },
+    "public_issue_number": {
+      "type": "integer",
+      "minimum": 29
+    },
+    "forecast_week": {
+      "type": "string",
+      "pattern": "^20[0-9]{2}-W(0[1-9]|[1-4][0-9]|5[0-3])$"
+    },
+    "issued_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "public_issue_number",
+        "forecast_week",
+        "family",
+        "kind",
+        "statement_da",
+        "statement_en",
+        "issued_at_utc",
+        "evaluation_start_utc",
+        "evaluation_end_utc",
+        "source_sha256",
+        "metric_source_id"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 200
+        },
+        "public_issue_number": {
+          "type": "integer",
+          "minimum": 29
+        },
+        "forecast_week": {
+          "type": "string",
+          "pattern": "^20[0-9]{2}-W(0[1-9]|[1-4][0-9]|5[0-3])$"
+        },
+        "family": {
+          "enum": [
+            "DIRECTION_ROTATION_CLAIMS",
+            "PULLBACK_EDGE"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "METRIC_COMPARISON",
+            "DIRECTIONAL_CLOSE",
+            "EVENT_OCCURRENCE",
+            "START_WINDOW",
+            "END_WINDOW",
+            "SEVERITY_CLASS",
+            "ALTCOIN_IMPACT"
+          ]
+        },
+        "statement_da": {
+          "type": "string",
+          "minLength": 8
+        },
+        "statement_en": {
+          "type": "string",
+          "minLength": 8
+        },
+        "issued_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evaluation_start_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evaluation_end_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "metric_source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "declared_state": {
+          "enum": [
+            "ELIGIBLE",
+            "ABSTAIN",
+            "UNKNOWN",
+            "UNAVAILABLE"
+          ]
+        },
+        "operator": {
+          "enum": [
+            "LT",
+            "LTE",
+            "GT",
+            "GTE",
+            "EQ"
+          ]
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "anchor": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "tolerance_pct": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "expected": {
+          "enum": [
+            "UP",
+            "DOWN",
+            "SIDEWAYS"
+          ]
+        },
+        "asset": {
+          "enum": [
+            "BTC"
+          ]
+        },
+        "threshold_pct": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "expected_event": {
+          "type": "boolean"
+        },
+        "earliest_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "latest_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expected_severity": {
+          "enum": [
+            "SMALL",
+            "MATERIAL",
+            "MAJOR"
+          ]
+        },
+        "expected_impact": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH"
+          ]
+        },
+        "basket_definition_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}
