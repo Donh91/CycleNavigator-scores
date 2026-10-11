@@ -6,6 +6,10 @@ This repository will give humans and independent AI agents a simple, reproducibl
 
 **IMPORTANT:** Public Git commits can be rewritten by repository administrators; a SHA-256 hash alone is not proof that a prediction existed before its outcome. This README defines the required publication and evidence gates, not a claim that any historical result is already independently cryptographically verified.
 
+## Staged import snapshot (2026-10-11)
+
+The draft branch now mirrors the existing CN historical scoreboard for public issue numbers 1 through 27 as a source-exact legacy record. It also stages individual existing public scorecards for CN23 through CN27. The earliest records are original archive claims with differing metrics and do not satisfy independent ex-ante timestamp verification. No immutable releases or external timestamp anchors have been issued.
+
 ## Current status
 
 - The authoritative forecasts and completed scorecards currently live in the existing Investering Framework repository.
