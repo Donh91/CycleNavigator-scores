@@ -1,0 +1,34 @@
+name: CN v2 prospective binary scoring and pullback evidence
+
+on:
+  pull_request:
+    paths:
+      - 'CN_V2_EDGE_SCOREBOOK_PROTOCOL_2026-W42.md'
+      - 'verify/evaluate_cn_v2_claims.py'
+      - 'verify/pullback_events.py'
+      - 'verify/test_evaluate_cn_v2_claims.py'
+      - 'verify/test_pullback_events.py'
+      - 'schema/cn-v2-frozen-claims.schema.json'
+      - '.github/workflows/cn-v2-claims-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scorebook-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify source-only deterministic scorer syntax
+        run: python -m py_compile verify/evaluate_cn_v2_claims.py verify/pullback_events.py
+      - name: Verify every binary and pullback evidence negative case
+        run: python -m unittest -v verify.test_evaluate_cn_v2_claims verify.test_pullback_events
+      - name: Check schema parses cleanly
+        run: python -m json.tool schema/cn-v2-frozen-claims.schema.json >/dev/null
+      - name: Forbid accidental production scoring claims
+        run: |
+          echo 'Method is an isolated prospective evaluator. No external market source has been authenticated or sealed for W42.'
