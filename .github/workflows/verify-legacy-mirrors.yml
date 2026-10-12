@@ -6,6 +6,8 @@ on:
       - 'scores/**'
       - 'verify/**'
       - 'LEGACY_IMPORT_INDEX.json'
+      - 'v2/**'
+      - 'README.md'
       - '.github/workflows/verify-legacy-mirrors.yml'
   workflow_dispatch:
 
