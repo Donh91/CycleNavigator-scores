@@ -1,20 +1,36 @@
 {
   "contract": "CN_V2_PUBLIC_SCORE_INDEX_v1",
-  "as_of_date_utc": "2026-10-11",
+  "as_of_date_utc": "2026-10-12",
   "score_era": "CN_V2_PROSPECTIVE_V1",
   "first_eligible_forecast_week": "2026-W42",
   "first_eligible_public_issue_number": 29,
-  "publication_status": "AWAITING_FIRST_PROSPECTIVE_FREEZE",
-  "current_frozen_forecast": null,
+  "publication_status": "FIRST_ORIGINAL_W42_SOURCE_FROZEN_PROVISIONAL_MIRROR_NOT_PROOF_SEALED",
+  "current_frozen_forecast": {
+    "source_issue_number": 29,
+    "forecast_week": "2026-W42",
+    "source_weekly_issued_at_utc": "2026-10-12T06:32:25Z",
+    "scoring_valid_from_utc": "2026-10-12T07:00:00Z",
+    "original_source_repo": "Donh91/Investering-Framework-Archive-v1",
+    "original_source_path": "05_CYCLE_NAVIGATOR/weekly/2026/W42/CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+    "source_manifest_sha256": "b9415148ff1a2eb3898f4167cd3a1eb4d5d07bbd16dfdad5aadf48a2b0df1896",
+    "public_readback_receipt": "v2/source-receipts/2026/W42/CN29_PROVISIONAL_SOURCE_READBACK.json",
+    "source_claim_count": 10,
+    "eligible_binary_claims": 0,
+    "abstained_claims": 10,
+    "original_source_risk_state": "BUILDING",
+    "v2_score": null,
+    "verification": "PROVISIONAL_NOT_EXTERNALLY_PREWINDOW_ATTESTED",
+    "claim_window_matures_after_start": true
+  },
   "latest_matured_score": null,
   "score_families": {
     "PRICE_RANGE_WEEKLY": {
-      "status": "PENDING_FUTURE_ISSUE",
+      "status": "W42_FORECAST_FROZEN_NOT_YET_COMPLETED",
       "formula": "70pct_containment_plus_30pct_jaccard",
       "separate_from_binary_claims": true
     },
     "PRICE_RANGE_INTRADAY": {
-      "status": "PENDING_FUTURE_ISSUE",
+      "status": "W42_FORECAST_FROZEN_NOT_YET_COMPLETED",
       "windows": [
         "day_1_2",
         "day_3_4",
@@ -23,7 +39,7 @@
       "separate_from_binary_claims": true
     },
     "DIRECTION_ROTATION_CLAIMS": {
-      "status": "AWAITING_ELIGIBLE_FROZEN_PREDICATES",
+      "status": "W42_FROZEN_QUALITATIVE_ONLY_ALL_ABSTAIN",
       "grading": "100_supported_0_refuted_null_unknown_or_pending",
       "checkpoint_days": [
         7,
@@ -34,7 +50,7 @@
       ]
     },
     "PULLBACK_EDGE": {
-      "status": "AWAITING_ELIGIBLE_FROZEN_WARNINGS",
+      "status": "W42_PULLBACK_BUILDING_IS_WATCH_NOT_NUMERIC_WARNING_ABSTAIN",
       "grading": "100_supported_0_refuted_null_unknown_or_pending",
       "time_buckets_hours": [
         12,
@@ -51,7 +67,7 @@
     }
   },
   "verification": {
-    "status": "NO_V2_PROSPECTIVE_PROOF_AVAILABLE_YET",
+    "status": "ORIGINAL_W42_SOURCE_READBACK_PROVISIONAL_NO_INDEPENDENT_PREWINDOW_PROOF",
     "git_commit_is_not_independent_timestamp": true,
     "immutable_release_enabled_and_verified": false,
     "external_anchor_confirmed": false,
@@ -65,6 +81,17 @@
   "source_weekly_workflow": ".github/workflows/cycle-navigator-weekly-publication.yml",
   "source_freeze_filename": "CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
   "legacy_archive": "legacy/CN_PUBLIC_HISTORY_SCOREBOARD_ORIGINAL.json",
-  "human_note": "This object is a truthful bootstrap status index, not a forecast, score or independent proof. Future publisher must update it only after verified external release and evidence gates pass.",
-  "work_mission": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1578"
+  "human_note": "Readback as of 2026-10-12: Official CN29 W42 original source was frozen at 06:32:25Z with scoring validity from 07:00Z. Ten qualitative/ambiguous claims are all ABSTAIN; no v2 binary score exists. Mirror created after initial window start and cannot backdate independent proof. Latest completed PRICE RANGE is separate pre-v2 public CN28 W41 at 49.56%.",
+  "work_mission": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1578",
+  "latest_completed_price_range_before_v2": {
+    "public_issue_number": 28,
+    "forecast_week": "2026-W41",
+    "completed_status": "FINAL_DUAL_TRACK",
+    "public_scorecard_path": "scores/2026/W41/CN28/CANONICAL_PUBLIC_SCORECARD.json",
+    "source_formula": "70pct_containment_plus_30pct_jaccard",
+    "score": 49.56,
+    "market_structure_precision": null,
+    "combined_score": null,
+    "externally_sealed": false
+  }
 }
