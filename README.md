@@ -6,9 +6,19 @@ This repository will give humans and independent AI agents a simple, reproducibl
 
 **IMPORTANT:** Public Git commits can be rewritten by repository administrators; a SHA-256 hash alone is not proof that a prediction existed before its outcome. This README defines the required publication and evidence gates, not a claim that any historical result is already independently cryptographically verified.
 
+## Current public-source readback · 12 October 2026
+
+**New official weekly source:** public **CN #29 / 2026-W42** was generated 2026-10-12 06:32:25 UTC with first eligible weekly hour 07:00 UTC. Source SHA binding is captured in [CN29 provisional readback](v2/source-receipts/2026/W42/CN29_PROVISIONAL_SOURCE_READBACK.json) and the [public v2 index](v2/scorebook-index.json). The original read-only source remains in the Archive repo.
+
+**New v2 binary score status: NONE**. All 10 W42 claim snapshots are **ABSTAIN**: they do not have an ex-ante typed measurable predicate, and the official pullback state was only `BUILDING` (watch, not a 5% material warning). They must NOT be shown as 10/10, 0/10, accuracy, prediction failure, or market Edge.
+
+**Latest completed public Price Range:** **CN #28 / W41 = 49.56%** from the exact original public scorecard; BTC 62.94%, ETH 36.17%, 168 hourly observation coverage. [Source-exact CN28 mirror](scores/2026/W41/CN28/CANONICAL_PUBLIC_SCORECARD.json). Market/Structure and combined overall score are null. This price result is a completed **pre-v2** issue, not a binary Edge score.
+
+**Independent proof is NOT sealed:** W42's original source freeze time predates the first eligible weekly hour according to the source receipt, but the public readback mirror is authored afterward; neither proves independent external timestamp existence before the initial scoring window. Immutable release + independent external time witness and completed observation verification remain open at [proof issue #2](https://github.com/Donh91/CycleNavigator-scores/issues/2).
+
 ## Staged import snapshot (2026-10-11)
 
-This repository mirrors the existing CN historical scoreboard for public issue numbers 1 through 27 as a source-exact legacy record. It also stages individual existing public scorecards for CN23 through CN27. The earliest records are original archive claims with differing metrics and do not satisfy independent ex-ante timestamp verification. No immutable releases or external timestamp anchors have been issued.
+This repository mirrors the existing CN historical scoreboard for public issue numbers 1 through 27 as the original byte-exact legacy overview. In addition, source-exact individual scorecards now cover CN23 through CN28 (the settled W41 result). The earliest records are original archive claims with differing metrics and do not satisfy independent ex-ante timestamp verification. No immutable releases or external timestamp anchors have been issued.
 
 ## Current status
 
@@ -25,7 +35,7 @@ From **Monday 12 October 2026**, the new public-facing evaluation architecture a
 2. **Direction / Flow / Rotation**: original bilingual, type-checked prospective statements are scored **100 = supported; 0 = refuted; null = pending/abstain/not evaluable** only where the measurable predicate, source and horizon were frozen before outcomes. Individual weekly / 14 / 21 / 28 / 56-day claims retain their original issue identity until maturity.
 3. **Pullback Edge**: track the presence or absence of an explicit warning, actual BTC material pullback onset, severity, possible recovery/end, warning lead time and independently reproducible altcoin-basket impact. False alarms and missed declines must not disappear from reported denominators. No-warning requires a valid, explicit source state; missing risk data is NOT a successful no-warning.
 
-**As of 2026-10-11**, there are **no settled W42 new-era scores**. The scoring code and existing weekly CN source capture have been installed, but the first W42 source freeze, mature observations, immutable release proof and independent claim verification must still occur.
+**As of 2026-10-12**, there are **no settled W42 new-era binary scores**. The original W42 source freeze exists and is now mirrored as provisional readback, but its ten claims are all ABSTAIN. Mature observations, genuinely eligible forward predicates, immutable release proof and independent claim verification are still outstanding.
 
 Core public files:
 - [Prospectively registered scoring rules](CN_V2_EDGE_SCOREBOOK_PROTOCOL_2026-W42.md)
