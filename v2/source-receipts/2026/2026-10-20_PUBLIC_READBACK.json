@@ -1,0 +1,191 @@
+{
+  "contract": "CN_PUBLIC_SOURCE_READBACK_v1",
+  "as_of_utc": "2026-10-20T11:54:00Z",
+  "verification": "PROVISIONAL",
+  "not_an_ex_ante_publication": true,
+  "source_commit": "4275549c48240159a2681632793fcd7a8f9d1136",
+  "latest_forecast_public_issue": 30,
+  "latest_completed_price_range": {
+    "source_repo": "Donh91/Investering-Framework-Archive-v1",
+    "source_commit": "4275549c48240159a2681632793fcd7a8f9d1136",
+    "source_path": "05_CYCLE_NAVIGATOR/public_scorecards/2026/W42/CN29_PUBLIC_SCORECARD.json",
+    "copy": "scores/2026/W42/CN29/CANONICAL_PUBLIC_SCORECARD.json",
+    "sha256": "527940d05bbe626ff3769da7641a923550a1dba9060d887d992f2cb945c34153",
+    "source_blob_sha1": "000a52f71008b30807f892d77ede054c1238f9de",
+    "public_issue_number": 29,
+    "forecast_week": "2026-W42",
+    "score": 85.25,
+    "formula": "70pct_containment_plus_30pct_jaccard",
+    "actuals_hourly_coverage": 168,
+    "market_structure_precision": null,
+    "combined_score": null
+  },
+  "frozen_claims": [
+    {
+      "source_repo": "Donh91/Investering-Framework-Archive-v1",
+      "source_commit": "4275549c48240159a2681632793fcd7a8f9d1136",
+      "source_path": "05_CYCLE_NAVIGATOR/weekly/2026/W42/CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+      "copy": "forecasts/2026/W42/CN29/CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+      "sha256": "a833058af70bf05e85b72cc11bf580b3378682edb4db724787f15f892ab0b9ae",
+      "source_blob_sha1": "798a0d193a3ee0d5914d1d4d1c3501bf0aabe341",
+      "public_issue_number": 29,
+      "forecast_week": "2026-W42",
+      "claim_count": 10,
+      "eligible_binary_claims": 0,
+      "abstained_claims": 10,
+      "accuracy_pct": null,
+      "verification": "PROVISIONAL",
+      "maturity": [
+        {
+          "claim_id": "CN29-2026-W42-WEEKLY_ETHBTC",
+          "evaluation_end_utc": "2026-10-19T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        },
+        {
+          "claim_id": "CN29-2026-W42-WEEKLY_BREADTH",
+          "evaluation_end_utc": "2026-10-19T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        },
+        {
+          "claim_id": "CN29-2026-W42-WEEKLY_REGIME",
+          "evaluation_end_utc": "2026-10-19T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        },
+        {
+          "claim_id": "CN29-2026-W42-WEEKLY_ROTATION",
+          "evaluation_end_utc": "2026-10-19T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        },
+        {
+          "claim_id": "CN29-2026-W42-WEEKLY_FLOW",
+          "evaluation_end_utc": "2026-10-19T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        },
+        {
+          "claim_id": "CN29-2026-W42-DIRECTION_14D",
+          "evaluation_end_utc": "2026-10-26T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN29-2026-W42-DIRECTION_21D",
+          "evaluation_end_utc": "2026-11-02T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN29-2026-W42-DIRECTION_28D",
+          "evaluation_end_utc": "2026-11-09T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN29-2026-W42-DIRECTION_56D",
+          "evaluation_end_utc": "2026-12-07T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN29-2026-W42-PB24H",
+          "evaluation_end_utc": "2026-10-13T07:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        }
+      ]
+    },
+    {
+      "source_repo": "Donh91/Investering-Framework-Archive-v1",
+      "source_commit": "4275549c48240159a2681632793fcd7a8f9d1136",
+      "source_path": "05_CYCLE_NAVIGATOR/weekly/2026/W43/CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+      "copy": "forecasts/2026/W43/CN30/CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json",
+      "sha256": "160cb3ebb9846de47273f671991f3a45903b1253e58d856d0d6b020c9ed07254",
+      "source_blob_sha1": "a4286cfee2f66df0d18ffbb5244462cf16a5a9d4",
+      "public_issue_number": 30,
+      "forecast_week": "2026-W43",
+      "claim_count": 10,
+      "eligible_binary_claims": 0,
+      "abstained_claims": 10,
+      "accuracy_pct": null,
+      "verification": "PROVISIONAL",
+      "maturity": [
+        {
+          "claim_id": "CN30-2026-W43-WEEKLY_ETHBTC",
+          "evaluation_end_utc": "2026-10-26T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-WEEKLY_BREADTH",
+          "evaluation_end_utc": "2026-10-26T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-WEEKLY_REGIME",
+          "evaluation_end_utc": "2026-10-26T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-WEEKLY_ROTATION",
+          "evaluation_end_utc": "2026-10-26T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-WEEKLY_FLOW",
+          "evaluation_end_utc": "2026-10-26T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-DIRECTION_14D",
+          "evaluation_end_utc": "2026-11-02T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-DIRECTION_21D",
+          "evaluation_end_utc": "2026-11-09T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-DIRECTION_28D",
+          "evaluation_end_utc": "2026-11-16T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-DIRECTION_56D",
+          "evaluation_end_utc": "2026-12-14T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": false
+        },
+        {
+          "claim_id": "CN30-2026-W43-PB24H",
+          "evaluation_end_utc": "2026-10-20T06:00:00Z",
+          "status": "ABSTAIN",
+          "window_elapsed": true
+        }
+      ]
+    }
+  ],
+  "independent_proof": {
+    "status": "BLOCKED",
+    "immutable_release_verified": false,
+    "external_pre_window_anchor_verified": false,
+    "independent_outcome_reproduction": false
+  },
+  "limitations": [
+    "Readback published after window start; never independent pre-window proof.",
+    "Elapsed windows do not make qualitative ABSTAIN claims scoreable.",
+    "W43 weekly and all 14/21/28/56-day horizons remain immature at this cutoff.",
+    "Price Range precision is not binary Edge, return, or the separate frozen-claim score."
+  ]
+}
