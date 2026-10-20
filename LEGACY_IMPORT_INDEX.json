@@ -47,14 +47,21 @@
       "source_blob_sha1": "e5408cf7bda0b5f76850e6fbc80ba92094a3a197",
       "copy": "scores/2026/W41/CN28/CANONICAL_PUBLIC_SCORECARD.json",
       "status": "LEGACY_ATTESTED"
+    },
+    {
+      "public_issue_number": 29,
+      "forecast_week": "2026-W42",
+      "source_blob_sha1": "000a52f71008b30807f892d77ede054c1238f9de",
+      "copy": "scores/2026/W42/CN29/CANONICAL_PUBLIC_SCORECARD.json",
+      "status": "LEGACY_ATTESTED"
     }
   ],
-  "unmigrated_scope": "Individual original forecast freezes and full per-issue source/outcome proof for CN1–22 remain UNMIGRATED. The original 27-row site history projection is retained byte-for-byte. Separate original public scorecard copies now cover CN23–28, including the newly settled CN28 W41; GitHub integrity does not independently establish ex-ante timestamps.",
+  "unmigrated_scope": "Individual original forecast freezes and full per-issue source/outcome proof for CN1–22 remain UNMIGRATED. The original 27-row site history projection is retained byte-for-byte. Separate original public scorecard copies now cover CN23–29, including settled CN29 W42; GitHub integrity does not independently establish ex-ante timestamps.",
   "rules": [
     "These records are staged historical scorecard mirrors, not certified independently verified prediction precision.",
     "The original Git blob SHA1 is a byte-correspondence marker only, not a third-party timestamp.",
     "No overall accuracy aggregation across eras; preserve null values.",
-    "Current public forecast CN29 for 2026-W42 is frozen and not yet a mature completed score; CN28 W41 is the latest completed public Price Range score."
+    "As of 2026-10-20: CN30 W43 is the current open forecast; CN29 W42 is the latest completed public Price Range score. Neither is independently proof-sealed."
   ],
   "historical_scoreboard": {
     "copy": "legacy/CN_PUBLIC_HISTORY_SCOREBOARD_ORIGINAL.json",

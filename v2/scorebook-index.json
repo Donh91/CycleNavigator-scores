@@ -93,5 +93,13 @@
     "market_structure_precision": null,
     "combined_score": null,
     "externally_sealed": false
-  }
+  },
+  "latest_readback": {
+    "as_of_utc": "2026-10-20T11:54:00Z",
+    "path": "v2/source-receipts/2026/2026-10-20_PUBLIC_READBACK.json",
+    "latest_forecast_public_issue": 30,
+    "latest_completed_price_range_public_issue": 29,
+    "verification": "PROVISIONAL"
+  },
+  "snapshot_scope": "Other fields preserve the dated 2026-10-12 bootstrap snapshot. Resolve latest_readback for newer publication status; do not treat this snapshot as current."
 }

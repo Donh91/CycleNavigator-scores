@@ -6,6 +6,34 @@ This repository will give humans and independent AI agents a simple, reproducibl
 
 **IMPORTANT:** Public Git commits can be rewritten by repository administrators; a SHA-256 hash alone is not proof that a prediction existed before its outcome. This README defines the required publication and evidence gates, not a claim that any historical result is already independently cryptographically verified.
 
+## Current readback: 2026-10-20
+
+The [latest machine-readable readback](v2/source-receipts/2026/2026-10-20_PUBLIC_READBACK.json) supersedes the dated October 12 bootstrap status below. The v2 index now links it through `latest_readback`; older snapshot fields are retained for audit continuity.
+
+- Current forecast: **CN30 / W43**, original source copied byte-for-byte with pinned source commit and SHA-256.
+- Latest completed **Price Range: CN29 / W42 = 85.25%**, 168 hourly observations and six BTC/ETH windows. [Original scorecard copy](scores/2026/W42/CN29/CANONICAL_PUBLIC_SCORECARD.json). This is the established 70/30 score, not binary Edge or investment return.
+- **W42 and W43: 10 ABSTAIN claims each, zero eligible binary claims, accuracy null.** Elapsed W42 weekly and both 24h windows do not cure missing ex-ante measurable predicates. Other future horizons remain unfinished.
+- **Independent proof: BLOCKED.** These copies are PROVISIONAL readbacks published after the initial windows, without verified immutable release or independent pre-window timestamp. No historical source is rewritten or backdated. [Proof owner #2](https://github.com/Donh91/CycleNavigator-scores/issues/2) remains open.
+
+The byte-exact `CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json` files are canonical full source bundles. For the published compact claims schema, use their adjacent `CLAIMS.json` projections: unchanged allowed fields only, no new predicates or altered frozen copy. Both projections validate against `schema/cn-v2-frozen-claims.schema.json`.
+
+### Verify with an AI
+
+Copy this request into an AI with GitHub/web access:
+
+> Audit this repository's README and v2/scorebook-index.json, following latest_readback. Fetch each referenced original at its exact source_commit, compare original bytes and SHA-256 with the public copies, and preserve public CN identity and forecast week. Run the existing verify/verify_legacy_imports.py and verify/evaluate_cn_v2_claims.py where applicable. Do not infer an eligible prediction from prose or fabricate missing outcomes. Report byte integrity, score reproducibility, pre-window publication evidence, immutable-release evidence, external timestamps and maturity separately. Return VERIFIED only when every PROTOCOL.md proof gate is met; otherwise give PROVISIONAL, ABSTAIN or BLOCKED with reasons. Never equate 85.25% Price Range precision with Edge or investment return.
+
+Local integrity check (does not establish independent timestamp proof):
+
+```sh
+python verify/verify_legacy_imports.py --online
+python -m unittest discover -s verify -p 'test_*.py'
+```
+
+## Historical bootstrap snapshot (2026-10-12)
+
+The following status describes October 12, not the current completed week.
+
 ## Current public-source readback · 12 October 2026
 
 **New official weekly source:** public **CN #29 / 2026-W42** was generated 2026-10-12 06:32:25 UTC with first eligible weekly hour 07:00 UTC. Source SHA binding is captured in [CN29 provisional readback](v2/source-receipts/2026/W42/CN29_PROVISIONAL_SOURCE_READBACK.json) and the [public v2 index](v2/scorebook-index.json). The original read-only source remains in the Archive repo.
