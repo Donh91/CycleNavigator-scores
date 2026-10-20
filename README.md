@@ -15,6 +15,8 @@ The [latest machine-readable readback](v2/source-receipts/2026/2026-10-20_PUBLIC
 - **W42 and W43: 10 ABSTAIN claims each, zero eligible binary claims, accuracy null.** Elapsed W42 weekly and both 24h windows do not cure missing ex-ante measurable predicates. Other future horizons remain unfinished.
 - **Independent proof: BLOCKED.** These copies are PROVISIONAL readbacks published after the initial windows, without verified immutable release or independent pre-window timestamp. No historical source is rewritten or backdated. [Proof owner #2](https://github.com/Donh91/CycleNavigator-scores/issues/2) remains open.
 
+The byte-exact `CYCLE_NAVIGATOR_V2_EDGE_FREEZE.json` files are canonical full source bundles. For the published compact claims schema, use their adjacent `CLAIMS.json` projections: unchanged allowed fields only, no new predicates or altered frozen copy. Both projections validate against `schema/cn-v2-frozen-claims.schema.json`.
+
 ### Verify with an AI
 
 Copy this request into an AI with GitHub/web access:
